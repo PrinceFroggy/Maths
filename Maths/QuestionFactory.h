@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  QuestionFactory.h
 //  Maths
 //
 //  Created by Andrew Solesa on 2017-03-08.
@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Question.h"
 
-@interface AdditionQuestion : Question
+@interface QuestionFactory : Question
+
+-(Question*)generateRandomQuestion;
 
 @end

@@ -2,25 +2,29 @@
 //  AdditionQuestion.m
 //  Maths
 //
-//  Created by Andrew Solesa on 2017-03-07.
+//  Created by Andrew Solesa on 2017-03-08.
 //  Copyright © 2017 KSG. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
 
 @implementation AdditionQuestion
 
-- (instancetype) init
+- (instancetype)init
 {
     if (self = [super init])
     {
-        _leftValue = arc4random_uniform(90) + 10;
-        _rightValue = arc4random_uniform(90) + 10;
-        _question = [NSString stringWithFormat:@"%d + %d = ?\n", self.leftValue, self.rightValue];
-        _answer = self.leftValue + self.rightValue;
+        [self generateQuestion];
     }
     return self;
+}
+
+
+-(void)generateQuestion
+{
+    super.question = [NSString stringWithFormat:@"%d + %d\n", super.leftValue, super.rightValue];
+    super.answer = super.leftValue + super.rightValue;
+    NSLog(@"%@", super.question);
 }
 
 @end
