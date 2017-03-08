@@ -33,7 +33,7 @@ int main(int argc, const char * argv[])
             if ([convertedInput isEqualToString:@"quit"])
             {
                 NSLog(@"GAME OVER");
-                gameOn = YES;
+                gameOn = NO;
                 break;
             }
             
